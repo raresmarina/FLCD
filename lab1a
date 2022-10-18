@@ -1,0 +1,84 @@
+p1:Print maximum between a and b or "no_maxi" if the numbers are equal. 
+ 
+ 
+$ 
+def a integer; 
+def b integer; 
+def maxi integer; 
+ 
+verif(a>b) 
+{maxi <- a; 
+print(maxi); 
+} 
+else
+  verif(a<b) 
+    {maxi <- b; 
+    print(maxi); 
+    } 
+else 
+print("no_maxi"); 
+$ 
+ 
+p2:Verify if the sum of a and b is a prime number. 
+ 
+$ 
+def a integer; 
+def b integer; 
+def sum integer; 
+def rem integer; 
+def i; 
+def answer[20] string; 
+ 
+sum <- a+b; 
+answer <- "Prime"; 
+Floop(i=2 : <= sum/2){ 
+rem <- n % i; 
+verif(rem == 0) 
+answer <- "not prime"; 
+ 
+ 
+} 
+print(answer); 
+$ 
+ 
+ 
+ 
+p3:Sum of all proper divisors of a natural number 
+$ 
+def a integer; 
+def sum integer; 
+def i integer; 
+i<-2; 
+Wloop(i <= a/2){ 
+verif(a % i == 0) 
+sum <- sum + i; 
+i <- i+1; 
+} 
+print(sum); 
+$ 
+ 
+ 
+ 
+p1err:Cmmdc 
+$ 
+def a integer; 
+def b integer: 
+ 
+read>>a>>b; 
+ 
+Wloop(a^ != b) 
+{ 
+verif(a>b) 
+a <- a-b; 
+else 
+b <- b-1a; 
+} 
+ 
+print(a); 
+$ 
+ 
+ 
+ 
+ 
+ 
+ 
