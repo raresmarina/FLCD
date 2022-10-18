@@ -1,0 +1,24 @@
+<program>::=$<declist>;<cmpstmt>$
+<declist>::=<declaration>|<declaration>;<declist>
+<declaration>::=def <identifier> <type>
+<type1>::=integer|char|string
+<array>::=array[<no>]of<type1>
+<type>::=<type1>|<array>
+<cmpdstmt>::=<stmlist>
+<stmlist>::=<stmt>|<stmt>;<stmlist>
+<stm>::=<simplstmt>|<structstmt>
+<simplstmt>::=<assignstmt>|<iostmt>
+<assignstmt>::=<identifier> <- <expression>
+<expression>::=<expression>+<term>|<expression>-<term>|<term>
+<term>::=<term>*<factor>|<term>/<factor>|<factor>
+<factor>::=(<expression>)|<identifier>|<no>
+<iostmt>::=read(<identifier>)|print(<identifier>)|print(<const>)
+<const>::=<string>|<integer>|<char>
+<structstmt>::=<cmpdstmt>|<ifstmt>|<whilestmt>
+<ifstmt>::=verif(<condition>){<stmt>}|verify(<condition>){<stmt>}else{<stmt>}
+<whilestmt>::=wloop(<condition>){<stmt>}
+<forstmt>::=floop(<condition>){<stmt>}
+<condition>::=<expression><relation><expression>
+<relation>::=<|<=|=|>=|>
+
+ 
