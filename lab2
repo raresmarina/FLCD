@@ -1,0 +1,29 @@
+package model;
+
+import java.util.*;
+
+
+public class SymbolTable {
+    private List<Map.Entry<String, Object>> storage = new ArrayList<>();
+    public void add(String varName, Object varValue){
+        AbstractMap.SimpleEntry<String, Object> newEntry = new AbstractMap.SimpleEntry<>(varName, varValue);
+        for (int i = 0; i < storage.size(); i++) {
+            if (Objects.equals(storage.get(i).getKey(), varName)) {
+                storage.set(i, newEntry);
+            } else if (storage.get(i).getKey().compareTo(varName) > 0) {
+                storage.add(i, newEntry);
+            }
+        }
+        this.storage.add(new AbstractMap.SimpleEntry<String, Object>(varName, varValue));
+
+    }
+
+    public Object get(String varName) {
+        for (Map.Entry<String, Object> entry : storage) {
+            if (entry.getKey().equals(varName))
+                return entry.getValue();
+        }
+        throw new Error("Key not found!");
+    }
+
+}
