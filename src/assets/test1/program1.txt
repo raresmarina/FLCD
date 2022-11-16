@@ -1,0 +1,15 @@
+def integer a ;
+def integer b ;
+def integer maxi ;
+
+verif (a > b)
+{ maxi <- a;
+print(maxi);
+}
+else
+  verif(a<b)
+    {maxi <- b;
+    print(maxi);
+    }
+else
+print("no_maxi");
