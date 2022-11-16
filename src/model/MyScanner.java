@@ -33,6 +33,7 @@ public class MyScanner {
                 List<String> tokens = tokenize(line);
 
                 for (String token : tokens) {
+                    token = token.strip();
                     tokenPairs.add(new AbstractMap.SimpleEntry<>(token, lineNr));
                 }
 

@@ -1,0 +1,17 @@
+def a integer;
+def b integer;
+def sum integer;
+def rem integer;
+def i;
+def answer[20] string;
+
+sum <- a+b;
+answer <- "Prime";
+Floop(i=2 : <= sum/2){
+		rem <- n % i;
+		verif(rem == 0)
+			answer <- "not prime";
+
+
+}
+print(answer);

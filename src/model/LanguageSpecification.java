@@ -34,7 +34,7 @@ public class LanguageSpecification {
     }
 
     public boolean isConstant(String token) {
-        String numericPattern = "^0|[+-]?[1-9][0-9]+(\\.\\d+)?";
+        String numericPattern = "^0|[+-]?[1-9][0-9]*(\\.\\d+)?";
         String charPattern = "^'[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]\'";
         String stringPattern = "^\"[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]+\"";
         return token.matches(numericPattern) ||

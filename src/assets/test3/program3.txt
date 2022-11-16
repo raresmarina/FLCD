@@ -1,0 +1,10 @@
+def a integer;
+def sum integer;
+def i integer;
+i<-2;
+Wloop(i <= a/2){
+	verif(a % i == 0)
+		sum <- sum + i;
+	i <- i+1;
+}
+print(sum);

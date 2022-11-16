@@ -1,0 +1,14 @@
+def a integer;
+def b integer:
+
+read>>a>>b;
+
+Wloop(a^ != b)
+{
+	verify(a>b)
+		a <- a-b;
+	else
+		b <- b-1a;
+}
+
+print(a);
